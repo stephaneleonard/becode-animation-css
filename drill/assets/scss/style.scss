@@ -1,0 +1,66 @@
+$Text_color: #fff;
+$Background_color: #000;
+
+body {
+  padding: 60px;
+  text-align: center;
+  background-color: $Background_color;
+  font-family: sans-serif;
+  div {
+    margin: 100px 0;
+  }
+
+  .first_button {
+    text-decoration: none;
+    color: $Text_color;
+    font-size: 40px;
+    font-weight: bold;
+    border: $Text_color 5px solid;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      background-color: $Text_color;
+      color: $Background_color;
+    }
+  }
+
+  .second_button {
+    text-decoration: none;
+    color: $Text_color;
+    font-size: 40px;
+    font-weight: bold;
+    border: $Text_color 5px solid;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s, font-size 0.5s;
+
+    &:hover {
+      background-color: $Text_color;
+      color: $Background_color;
+      font-size: 70px;
+    }
+  }
+
+  .third_button {
+    width: 430px;
+    margin: auto;
+    border: $Text_color 5px solid;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+    a {
+      text-decoration: none;
+      color: $Text_color;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: $Text_color;
+
+      transform: translateX(300px);
+    }
+    &:hover a {
+      color: $Background_color;
+    }
+  }
+}
