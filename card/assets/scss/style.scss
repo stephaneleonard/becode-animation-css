@@ -1,0 +1,117 @@
+$primaryColor: #e64c3c;
+
+body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: #ffff;
+  border: 0.2px solid rgb(207, 207, 207);
+  margin: 130px auto;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+
+  .img-container {
+    width: 100%;
+    height: 370px;
+    transition: height 0.5s;
+    overflow: hidden;
+    
+
+    .img {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url(/assets/img/hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: initial;
+      width: 100%;
+      height: 100%;
+      transition: background-image 0.5s, transform 0.5s;
+    }
+  }
+
+  .presentation {
+    padding: 20px;
+
+    h2 {
+      font-size: 200%;
+      font-weight: lighter;
+    }
+    h3 {
+      font-size: 120%;
+      color: $primaryColor;
+      font-weight: lighter;
+    }
+
+    .description {
+      visibility: hidden;
+      color: rgb(78, 77, 77);
+      transition: visibility 0.2s;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+
+      p {
+        padding-right: 20px;
+        color: rgb(78, 77, 77);
+      }
+    }
+  }
+
+  #photos {
+    background-color: $primaryColor;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    position: absolute;
+    bottom: 200px;
+    transition: bottom 0.5s;
+  }
+  #date {
+    background-color: $primaryColor;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    box-shadow: 6px 9px 22px 0px #c9c9c9;
+
+    .img-container {
+      height: 200px;
+
+      .img {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.568),
+            rgba(255, 255, 255, 0.363)
+          ),blur(20),
+          url(/assets/img/hero.jpg);
+
+        transform: scale(1.2);
+      }
+    }
+
+    #photos {
+      bottom: 370px;
+    }
+
+    .description {
+      visibility: visible;
+    }
+  }
+}
